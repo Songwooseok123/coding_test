@@ -11,7 +11,9 @@ FROM USED_GOODS_REPLY R
     ON B.BOARD_ID = R.BOARD_ID
 
 -- USED_GOODS_REPLY를 R로 취급 , USED_GOODS_BOARD를 B로 취급
--- R+B 순서로 JOIN 하는 거임.  
+-- LEFT JOIN : 왼쪽 테이블을 중심으로 오른쪽 테이블을 매치시킨다. 
+-- RIGHT JOIN : 오른쪽 테이블을 중심으로 왼쪽 테이블을 매치시킨다. 
+-- JOIN : 교집합     
 -- ON 뭐를 기준으로 JOIN할건지 
 
 ### 오름차순 -- 이중 오름 차순 
