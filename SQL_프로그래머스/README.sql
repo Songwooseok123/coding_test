@@ -48,6 +48,11 @@ WHERE MONTH(DATE_OF_BIRTH) = 03 AND GENDER = 'W' AND TLNO IS NOT NULL
 WHERE MCDP_CD = 'CS' OR MCDP_CD ='GS' 
 WHERE MCDP_CD in ('CS', 'GS')
 
+### WHERE OR WHERE IN 순서 반대로도 됨(요소가 컬럼에 있는지: 밑에 두개 같은 코드임 )
+WHERE SKILL_1 ='Python' OR SKILL_3 ='Python' OR SKILL_2 ='Python'
+WHERE 'Python' IN (SKILL_1,SKILL_2,SKILL_3)
+
+
 ### 평균 구하기 
 SELECT AVG(DAILY_FEE) AS AVERAGE_FEE
 FROM CAR_RENTAL_COMPANY_CAR
@@ -81,7 +86,7 @@ HAVING ADDRESS LIKE "서울%"
 -- GROUP BY로 REST_ID 별로 묶임. 그다음에 REST_ID 끼리 평균 계산 
 -- 그 중에서 서울 인거 뽑기 
 
-### GROUP BY HAVING COUNT 
+### GROUP BY ,HAVING, COUNT 
 
 SELECT USER_ID, PRODUCT_ID
 FROM ONLINE_SALE
@@ -90,3 +95,37 @@ HAVING COUNT(PRODUCT_ID) > 1
 
 -- GROUP BY 절: USER_ID와 PRODUCT_ID별로 데이터를 그룹화합니다. 즉, 각 사용자-제품 조합에 대해 한 번씩 그룹을 만듭니다.
 -- HAVING 절: 각 그룹에 대해 PRODUCT_ID의 개수를 계산합니다. 이 개수가 1보다 큰 그룹만을 선택합니다. 이는 특정 사용자가 동일한 제품을 두 번 이상 구매한 경우를 의미합니다.
+
+### 없는 컬럼 NULL로 채워서 SELECT 하기
+SELECT NULL AS USER_ID
+
+### UNION ALL -- 중복 제거 없이 합처서 결과, UNION -- 중복 제거 결과
+
+### DATETIME 상위 한개 
+SELECT NAME
+FROM ANIMAL_INS
+WHERE DATETIME =
+      (SELECT MIN(DATETIME)
+       FROM ANIMAL_INS    
+      )
+-- 위에거랑 밑에꺼랑 같은 거임. 
+SELECT NAME
+FROM animal_ins
+ORDER BY DATETIME
+LIMIT 1 
+
+### SELECT하고 갯수 세기 
+SELECT COUNT(USER_ID)
+
+### JOIN 2번 
+FROM A AS A
+     JOIN B AS B
+     ON A.ID = B.ID
+JOIN A AS AA  
+ON B.IID = AA.ID 
+-- A와 B를 ID로 조인하고 다시 그 테이블(AB)을 A와 조인하는데, A의 ID와 AB의 IID로 조인  
+
+### WHERE SKILL_CODE & 4 의 의미
+-- SKILL_CODE가 이진수로 4을 포함하고 있나 
+SKILL_CODE가 만약에 6이라면 b'110'이고 4는 b'100'라서 참이됨. 
+
