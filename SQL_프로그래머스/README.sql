@@ -133,5 +133,11 @@ ON B.IID = AA.ID
 -- SKILL_CODE가 이진수로 4을 포함하고 있나 
 SKILL_CODE가 만약에 6이라면 b'110'이고 4는 b'100'라서 참이됨. 
 
-대장균들의 자식 수 구하기 부터 다시 풀기 
+### 중복 제거 
+SELECT DISTINCT NAME 
+
+    
+SELECT: 대장균들의 자식 수 구하기 부터 다시 풀기 
+
+SUM.MAX.MIN 물고기 종류 별 대어 찾기
 
