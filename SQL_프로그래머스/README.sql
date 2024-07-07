@@ -136,6 +136,12 @@ SKILL_CODE가 만약에 6이라면 b'110'이고 4는 b'100'라서 참이됨.
 ### 중복 제거 
 SELECT DISTINCT NAME 
 
+### CONCAT
+SELECT CONCAT(MAX(LENGTH),'cm') AS MAX_LENGTH
+FROM FISH_INFO
+-- 50.00cm 로 출력하기 
+
+
     
 SELECT: 대장균들의 자식 수 구하기 부터 다시 풀기 
 
