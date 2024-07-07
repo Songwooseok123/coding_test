@@ -43,6 +43,7 @@ WHERE MONTH(DATE_OF_BIRTH) = 03 AND GENDER = 'W' AND TLNO IS NOT NULL
 
 -- AND로 계속 이어쓸 수 있음
 -- IS NOT NULL 문법 
+-- 참고로 IS NULL도 있
 
 ### WHERE OR 이나 WHERE IN이랑 같음     
 WHERE MCDP_CD = 'CS' OR MCDP_CD ='GS' 
@@ -99,6 +100,9 @@ HAVING COUNT(PRODUCT_ID) > 1
 ### 없는 컬럼 NULL로 채워서 SELECT 하기
 SELECT NULL AS USER_ID
 
+### 없는 컬럼 1로 채워서 SELECT하기(즉, COULMN만들기)
+SELECT 1 AS DLFAJLD
+
 ### UNION ALL -- 중복 제거 없이 합처서 결과, UNION -- 중복 제거 결과
 
 ### DATETIME 상위 한개 
@@ -128,4 +132,6 @@ ON B.IID = AA.ID
 ### WHERE SKILL_CODE & 4 의 의미
 -- SKILL_CODE가 이진수로 4을 포함하고 있나 
 SKILL_CODE가 만약에 6이라면 b'110'이고 4는 b'100'라서 참이됨. 
+
+대장균들의 자식 수 구하기 부터 다시 풀기 
 
