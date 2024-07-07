@@ -141,6 +141,7 @@ SELECT CONCAT(MAX(LENGTH),'cm') AS MAX_LENGTH
 FROM FISH_INFO
 -- 50.00cm 로 출력하기 
 
+### 복잡하게 전체 쿼리 안의 서브쿼리 대신에 밖에서 WITH FLJADLS AS (서브쿼리)로 FLHADLS라는 DB를 정의 할 수 있음. 
 
     
 SELECT
