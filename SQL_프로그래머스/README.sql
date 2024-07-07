@@ -145,9 +145,16 @@ FROM FISH_INFO
 
 ### 복잡하게 전체 쿼리 안의 서브쿼리 대신에 밖에서 WITH FLJADLS AS (서브쿼리)로 FLHADLS라는 DB를 정의 할 수 있음. 
 
+### CASE 조건문 
+SELECT ID, 
+       CASE
+            WHEN SIZE_OF_COLONY <=100 THEN 'LOW'
+            WHEN SIZE_OF_COLONY <=1000 THEN 'MEDIUM'
+            ELSE 'HIGH'
+       END AS SIZE
+
     
-SELECT
-    -- 대장균들의 자식 수 구하기 부터 다시 풀기 
+    
 
 SUM.MAX.MIN 
     -- 물고기 종류 별 대어 찾기
