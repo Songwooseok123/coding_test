@@ -65,6 +65,8 @@ SELECT ROUND(AVG(DAILY_FEE), 0) AS AVERAGE_FEE
 
 ### "ADDRESS 컬럼에서 강원도로 시작하는 데이터 찾기"
 WHERE ADDRESS LIKE "강원도%"
+-- 강원도 포함하는거는 "%강원도%"
+-- 강원도로 끝나는거는 "%강원도"
 
 ### TLNO 컬럼 값이 없으면,(즉 NULL이면) 'NONE'으로 출력하기
 SELECT IFNULL(TLNO,'NONE') AS TLNO
