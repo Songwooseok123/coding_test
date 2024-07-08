@@ -132,9 +132,13 @@ ON B.IID = AA.ID
 -- A와 B를 ID로 조인하고 다시 그 테이블(AB)을 A와 조인하는데, A의 ID와 AB의 IID로 조인  
 
 ### WHERE SKILL_CODE & 4 의 의미
--- SKILL_CODE가 이진수로 4을 포함하고 있나 
-SKILL_CODE가 만약에 6이라면 b'110'이고 4는 b'100'라서 참이됨. 
+-- SKILL_CODE가 이진수로 4을 포함하고 있나-> 겹치는거 값으로 나옴 
+SKILL_CODE가 만약에 6이라면 b'110'이고 4는 b'100'라서 겹치는 부분 b'100':즉 4가 나옴. 
+-- WHERE 문 안에서 0이 아닌 수가 나오면 참으로 인정되어서 조건문 성립됨. 
+    -- 포함하고 있지 않는다!: "SKILL_CODE & 4 = 0"
 
+-- WHERE A.GENOTYPE & B.GENOTYPE = B.GENOTYPE
+    -- A의 GENOTYPE이 B의 GENOTYPE을 모두 포함하고 있는지!
 ### 중복 제거 
 SELECT DISTINCT NAME 
 
@@ -153,10 +157,8 @@ SELECT ID,
             ELSE 'HIGH'
        END AS SIZE
 
-    
+### PERCENT_RANK() 와 RANK()
+SELECT ID, PERCENT_RANK() OVER (ORDER BY SIZE) AS PER 
     
 
-SUM.MAX.MIN 
-    -- 물고기 종류 별 대어 찾기
-    -- 연도별 대장균 크기의 편차 구하기
 
