@@ -1,3 +1,18 @@
+### SQL 실행순서
+- FROM 
+    - 테이블 전체를 가져오고, JOIN도 하고... 
+- WHERE
+    - JOIN 한 테이블에서 조건문 걸어
+- GROUP BY
+    - 그루핑해
+- HAVING
+    - 그룹핑 후에 그 그룹에서 사용하는 조건절임. 
+- SELECT
+    - 위의 조건들을 적용하고 난 후 어떤 컬럼을 출력할지 선택 
+- ORDER BY
+- LIMIT
+
+
 ### DATE_FOMAT(A, '날짜 어떻게 표시할지')
 SELECT BOOK_ID, DATE_FORMAT(PUBLISHED_DATE, '%Y-%m-%d') AS PUBLISHED_DATE
 
