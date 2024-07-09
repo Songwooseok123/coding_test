@@ -186,4 +186,7 @@ SELECT FOOD_TYPE, REST_ID, REST_NAME, FAVORITES
 FROM REST_INFO 
 WHERE (FOOD_TYPE, FAVORITES) IN (SELECT FOOD_TYPE, MAX(FAVORITES) AS FAVORITES
                                 FROM REST_INFO
-                                GROUP BY FOOD_TYPE)
+
+### 날짜 중간에 있는지. 
+WHERE '2022-10-16' BETWEEN START_DATE AND END_DATE
+                                GROUP BY FOOD_TYPE) 이상 이하임. 
