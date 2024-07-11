@@ -136,6 +136,19 @@ def divisors(n):
                 divisors.append(int(n/i))
     return len(divisors)
 
-
- 
+# 함수는 return 만나면 그대로 끝남. 
+def divisors(n):
+    for i in range(n):
+        print(i)
+        if i == 2:
+            return False
+            print("2만나면이거 실행안되고 걍 끝남")
+    return True
+divisors(18)
+'''
+0
+1
+2
+False
+'''
 
