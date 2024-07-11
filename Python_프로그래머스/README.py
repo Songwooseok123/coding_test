@@ -123,6 +123,7 @@ answer = []
 answer[-1] = i # error
 answer[-1:] = [i] # 이런식으로 확인하면됨. 
 
+# ''.join(nums)
 
 
  
