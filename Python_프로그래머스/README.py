@@ -118,6 +118,10 @@ for i in arr:
 # 문자열 TO 숫자열 
 ord('a')
 
+# 빈리스트에 요소 있는지 확인할 때, 비어있을 때 error 뜸...이럴때 편법
+answer = []
+answer[-1] = i # error
+answer[-1:] = [i] # 이런식으로 확인하면됨. 
 
 
 
