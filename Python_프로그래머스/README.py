@@ -1,3 +1,4 @@
+
 # 정수 띄어쓰기로 input 받는거
 list(map(int,input().split()))
 
@@ -14,9 +15,12 @@ for p,q in zip(phone_book,phone_book[1:]):
 # 문자열 q가 p 문자열로 시작하는지
 q.startswith(p)
 
-# 리스트 요소 삭제 - 처음 발견한(앞에서부터 탐색함) 1개만 삭제됨 
+# 리스트 요소 삭제 
+## .remove(요소)- 처음 발견한(앞에서부터 탐색함) 1개만 삭제됨 
 nums = [1,2,3,2,3]
 nums.remove(2)
+## .pop(n) - 뒤에서 n번째 1개 삭제하면서 삭제하는 요소 반환함 
+
 
 # 요소 갯수세기 - dictionary반환(많은 요소부터 정렬해서 반)
 from collections import Counter
