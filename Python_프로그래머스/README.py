@@ -45,6 +45,8 @@ list(combinations(nums,2))
 set([1,2,3,3,3]) - set([1,3,4])
 # {2}
 
+# 딕셔너리.keys(), 딕셔너리.values()
+
 
 
  
