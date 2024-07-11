@@ -105,7 +105,10 @@ deque([5, 4, 3])
 deque([4, 3])
 '''
 
-
+# continue 사용법
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/aa37adda-a925-4f98-92fd-edf6a1f56d7c/ac7b6a32-04ec-4db9-9806-131cc5f2e538/Untitled.png)
+## if 문 만족하면 해당 i에 대한 for문이 끝나고 다음 i로 넘어감
+## if 문 만족 안하면 밑에 print 실행함
 
 
 
