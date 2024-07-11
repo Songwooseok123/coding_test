@@ -43,11 +43,28 @@ list(combinations(nums,2))
 
 # set끼리 연산 가능 
 set([1,2,3,3,3]) - set([1,3,4])
-# {2}
+## {2}
 
-# 딕셔너리.keys(), 딕셔너리.values()
+# 리스트 2개로 dic만들기 
+genres= ["cla", "pop", "sic", "ass"]	
+plays= [500, 600, 150, 800]
+{k:v for k,v in zip(genres,plays)}
+# {'cla': 500, 'pop': 600, 'sic': 150, 'ass': 800}
 
+# 딕셔너리.keys(), 딕셔너리.values() ,딕셔너리.items
+# 딕셔너링 sort
+sorted(hash_maps)
+# key만 sort되서 나옴
 
+sorted(hash_maps.items(),key = lambda x: sums[x[0]])
+# hash_map을 정렬할건데... sums[x[0]] 함수의 결과값을 기준으로 정렬... x는 hash_maps.items()의 요소가 차례대로들어감
+## 예를 들어 
+a = {'cla': 500, 'pop': 600, 'sic': 150, 'ass': 800}
+b= sorted(a.items(),key = lambda x: x[1])
+b
+# [('sic', 150), ('cla', 500), ('pop', 600), ('ass', 800)]
 
+sorted_a = {k:v for k,v in b}
+## {'sic': 150, 'cla': 500, 'pop': 600, 'ass': 800}
  
 
