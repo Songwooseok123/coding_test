@@ -135,6 +135,13 @@ def divisors(n):
             if i**2 !=n:
                 divisors.append(int(n/i))
     return len(divisors)
+# 소수 구하기는 약수 다 구하지 말고 위의 함수에서 약수 구해지면 false 리턴해버리면됨. 
+def divisors(n):
+    for i in range(2,int(n**0.5)+1): 
+        if n%i == 0:
+            return False # 함수는 return 만나면 걍 끝남. 
+    if n not in [0,1]:
+        return  True
 
 # 함수는 return 만나면 그대로 끝남. 
 def divisors(n):
@@ -151,4 +158,6 @@ divisors(18)
 2
 False
 '''
+
+
 
