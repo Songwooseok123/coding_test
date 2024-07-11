@@ -49,7 +49,19 @@ set([1,2,3,3,3]) - set([1,3,4])
 genres= ["cla", "pop", "sic", "ass"]	
 plays= [500, 600, 150, 800]
 {k:v for k,v in zip(genres,plays)}
-# {'cla': 500, 'pop': 600, 'sic': 150, 'ass': 800}
+## {'cla': 500, 'pop': 600, 'sic': 150, 'ass': 800}
+
+# list 2개로 hashmap 만들기
+genres= ["cla", "pop","cla","sic" "sic", "ass"]	
+plays= [500, 600, 150, 800,400,300]
+hash_maps = {}
+for i in range(len(genres)):
+  if genres[i] in hash_maps:
+    hash_maps[genres[i]].append(plays[i])
+  else:
+    hash_maps[genres[i]] = [plays[i]]
+## {'cla': [500, 150], 'pop': [600], 'sicsic': [800], 'ass': [400]}
+
 
 # 딕셔너리.keys(), 딕셔너리.values() ,딕셔너리.items
 # 딕셔너링 sort
@@ -66,5 +78,9 @@ b
 
 sorted_a = {k:v for k,v in b}
 ## {'sic': 150, 'cla': 500, 'pop': 600, 'ass': 800}
+
+
+
+
  
 
