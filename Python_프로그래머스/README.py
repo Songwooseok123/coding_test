@@ -123,7 +123,18 @@ answer = []
 answer[-1] = i # error
 answer[-1:] = [i] # 이런식으로 확인하면됨. 
 
-# ''.join(nums)
+# 요소 이어 붙히기
+''.join(nums)
+
+# n의 약수 갯수 구하기  ## 복잡도 O(n**0.5)로 줄인 코드 
+def divisors(n):
+    divisors = []
+    for i in range(1,int(n**0.5)+1): 
+        if n%i == 0:
+            divisors.append(i)
+            if i**2 !=n:
+                divisors.append(int(n/i))
+    return len(divisors)
 
 
  
