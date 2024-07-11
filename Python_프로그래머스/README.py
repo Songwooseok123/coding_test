@@ -12,6 +12,8 @@ for p,q in zip(phone_book,phone_book[1:]):
   break
 ## 1,2
 
+# phone_book[::-1]
+## [3,2,1]
 # 문자열 q가 p 문자열로 시작하는지
 q.startswith(p)
 
@@ -82,6 +84,27 @@ b
 
 sorted_a = {k:v for k,v in b}
 ## {'sic': 150, 'cla': 500, 'pop': 600, 'ass': 800}
+
+# stask(선입후출), que(선입선출, 즉 대기줄)
+## stack은 걍 리스트로구현, que는 collections의 deque로 구현
+### deque(), popleft()
+from collections import deque
+ddd= deque()
+ddd.append(5)
+print(ddd)
+ddd.append(4)
+print(ddd)
+ddd.append(3)
+print(ddd)
+ddd.popleft()
+print(ddd)
+'''
+deque([5])
+deque([5, 4])
+deque([5, 4, 3])
+deque([4, 3])
+'''
+
 
 
 
