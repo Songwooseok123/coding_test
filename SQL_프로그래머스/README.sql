@@ -19,7 +19,12 @@ SELECT BOOK_ID, DATE_FORMAT(PUBLISHED_DATE, '%Y-%m-%d') AS PUBLISHED_DATE
 -- select date_format('2022-07-16 19', '%Y%m%d%H');
 -- "2022071619"
 -- y: 두자리연도
+-- c: 한자리는 한자리 연도 
 -- H: 24시간
+SELECT DATE_FORMAT(TIME,"%c") 
+-- 이거랑 
+SELECT MONTH(TIME) AS MONTH
+-- 똑같음. 
 
 ### JOIN
 FROM USED_GOODS_REPLY R
