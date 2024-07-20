@@ -2,6 +2,10 @@
 # 정수 띄어쓰기로 input 받는거
 list(map(int,input().split()))
 
+# 시간초과 나면 input() 대신 sys.stdin.readline()을 시도해보자
+a,b = map(int,sys.stdin.readline().split())
+## 참고로 주피터에선 안됨 
+
 # sort()를 len을 기준으로 할 수 있음
 phone_book.sort(key=len)
 
@@ -158,6 +162,11 @@ divisors(18)
 2
 False
 '''
+
+# data가 문자인지 아닌지
+data.isalpha()
+
+
 
 
 
