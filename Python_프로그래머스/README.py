@@ -18,16 +18,27 @@ for p,q in zip(phone_book,phone_book[1:]):
 
 # phone_book[::-1]
 ## [3,2,1]
+
+phone_book2 =[1,2,3]
+#list(reversed(phone_book2))
+## [3,2,1]
+
 # 문자열 q가 p 문자열로 시작하는지
 q.startswith(p)
 
 # 리스트 요소 삭제 
 ## .remove(요소)- 처음 발견한(앞에서부터 탐색함) 1개만 삭제됨 
-nums = [1,2,3,2,3]
+nums = [1,2,3,4,5]
 nums.remove(2)
-## .pop(n) - 뒤에서 n번째 1개 삭제하면서 삭제하는 요소 반환함 
-
-
+print(nums)
+### [1, 3, 4, 5]
+## .pop(n) - n번째 원소를 삭제하면서 삭제하는 요소 반환함 
+```
+nums = [1,2,3,4,5]
+nums.pop(3)
+print(nums)
+# [1, 2, 3, 5]
+```
 # 요소 갯수세기 - dictionary반환(많은 요소부터 정렬해서 반)
 from collections import Counter
 nums = [1,2,3,2,3]
