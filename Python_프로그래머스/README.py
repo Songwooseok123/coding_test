@@ -39,7 +39,7 @@ nums.pop(3)
 print(nums)
 # [1, 2, 3, 5]
 ```
-# 요소 갯수세기 - dictionary반환(많은 요소부터 정렬해서 반)
+# 요소 갯수세기 - dictionary 반환 
 from collections import Counter
 nums = [1,2,3,2,3]
 numsss = [1,2,3,4,3,3]
@@ -54,9 +54,10 @@ Counter(nums) - Counter(numsss)
 ### Counter({2: 1})
 
 ## Counter해서 가장 많이 등장하는 n개 찾기 - 리스트 안에 튜플로 반환
+nums = [1,2,3,2,3,5,5,5]
 b = Counter(nums)
 b.most_common(2)
-[(3, 3), (1, 1)]
+### [(5, 3), (2, 2)]
 
 # 순열과 조합 
 from itertools import comninations,permutations # 순서대로 조합과 순열 
@@ -73,6 +74,7 @@ plays= [500, 600, 150, 800]
 ## {'cla': 500, 'pop': 600, 'sic': 150, 'ass': 800}
 
 # list 2개로 hashmap 만들기
+## hashmap은 hashtable이라고도 불리고, 파이썬의 dictionary또한 hashtable로 구현되어있다. key와 value 쌍으로 데이터를 저장하는 자료구조를 말한다.
 genres= ["cla", "pop","cla","sic" "sic", "ass"]	
 plays= [500, 600, 150, 800,400,300]
 hash_maps = {}
@@ -84,7 +86,7 @@ for i in range(len(genres)):
 ## {'cla': [500, 150], 'pop': [600], 'sicsic': [800], 'ass': [400]}
 
 
-# 딕셔너리.keys(), 딕셔너리.values() ,딕셔너리.items
+# 딕셔너리.keys(), 딕셔너리.values() ,딕셔너리.items()
 # 딕셔너링 sort
 sorted(hash_maps)
 # key만 sort되서 나옴
