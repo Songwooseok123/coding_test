@@ -102,26 +102,6 @@ b
 sorted_a = {k:v for k,v in b}
 ## {'sic': 150, 'cla': 500, 'pop': 600, 'ass': 800}
 
-# stask(선입후출), que(선입선출, 즉 대기줄)
-## stack은 걍 리스트로구현, que는 collections의 deque로 구현
-### deque(), popleft()
-from collections import deque
-ddd= deque()
-ddd.append(5)
-print(ddd)
-ddd.append(4)
-print(ddd)
-ddd.append(3)
-print(ddd)
-ddd.popleft()
-print(ddd)
-'''
-deque([5])
-deque([5, 4])
-deque([5, 4, 3])
-deque([4, 3])
-'''
-
 # continue 사용법
 ## if 문 만족하면 해당 i에 대한 for문이 끝나고 다음 i로 넘어감
 ## if 문 만족 안하면 밑에 print 실행함
@@ -131,6 +111,9 @@ for i in arr:
     if i==1:
         continue
     print(i,"야호")
+## 3 야호
+## 3 야호
+## 0 야호
 
 # 문자열 TO 숫자열 
 ord('a')
@@ -138,45 +121,12 @@ ord('a')
 # 빈리스트에 요소 있는지 확인할 때, 비어있을 때 error 뜸...이럴때 편법
 answer = []
 answer[-1] = i # error
-answer[-1:] = [i] # 이런식으로 확인하면됨. 
+answer[-1:] == [i] # 이런식으로 확인하면됨. 
 
 # 요소 이어 붙히기
 ''.join(nums)
 
-# n의 약수 갯수 구하기  ## 복잡도 O(n**0.5)로 줄인 코드 
-def divisors(n):
-    divisors = []
-    for i in range(1,int(n**0.5)+1): 
-        if n%i == 0:
-            divisors.append(i)
-            if i**2 !=n:
-                divisors.append(int(n/i))
-    return len(divisors)
-# 소수 구하기는 약수 다 구하지 말고 위의 함수에서 약수 구해지면 false 리턴해버리면됨. 
-def divisors(n):
-    for i in range(2,int(n**0.5)+1): 
-        if n%i == 0:
-            return False # 함수는 return 만나면 걍 끝남. 
-    if n not in [0,1]:
-        return  True
-
-# 함수는 return 만나면 그대로 끝남. 
-def divisors(n):
-    for i in range(n):
-        print(i)
-        if i == 2:
-            return False
-            print("2만나면이거 실행안되고 걍 끝남")
-    return True
-divisors(18)
-'''
-0
-1
-2
-False
-'''
-
-# data가 문자인지 아닌지
+# 문자열 data가 문자인지 아닌지
 data.isalpha()
 
 
